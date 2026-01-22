@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MandiSystem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body >
+<div class="bg-gray-100">
+<header class="bg-sky-500 text-white border-b border-white/30 px-20">
+
+  <!-- GRID NAVBAR -->
+  <div class="grid grid-cols-[auto_1fr] grid-rows-[auto_auto] items-center">
+
+    <!-- COLUMN 1: LOGO (spans both rows) -->
+    <div class="row-span-2 flex items-center px-4">
+      <img
+        src="image/project logo.png"
+        alt="MandiSystem Logo"
+        class="h-16 w-auto scale-125 origin-left"
+      />
+    </div>
+
+   <!-- COLUMN 2 ROW 1: TITLE + LANGUAGE -->
+<div class="flex items-center justify-between py-2 border-b border-white/40">
+  <div class="leading-tight">
+    <h1 class="text-4xl font-bold">MandiSystem</h1>
+    <p class="text-xs opacity-90">Local Mandi Price System</p>
+  </div>
+
+  <select class="bg-white text-black text-sm px-3 py-1 rounded-md focus:outline-none">
+    <option>English</option>
+    <option>हिंदी</option>
+  </select>
+</div>
+
+
+    <!-- COLUMN 2 ROW 2: MENU -->
+    <nav class="flex gap-8 py-2 text-lg font-semibold">
+      <a href="#" class="hover:underline">Home</a>
+      <a href="#" class="hover:underline">Mandi Prices</a>
+      <a href="#" class="hover:underline">Weather</a>
+      <a href="#" class="hover:underline">Krishi Duniya</a>
+      <a href="#" class="hover:underline">Videos</a>
+      <a href="#" class="hover:underline">Farmer</a>
+      <a href="#" class="hover:underline">Wholeseller</a>
+      <a href="#" class="hover:underline">Govt. Policy</a>
+      <a href="#" class="hover:underline">Krishi Web Story</a>
+    </nav>
+
+  </div>
+
+</header>
+
+</div>
+
+<div class="px-20 mt-6">
+
+  <!-- TODAY MANDI PRICES HEADER -->
+  <div class="flex items-center gap-4 mb-6">
+    <div class="flex-1 h-1 bg-red-600"></div>
+    <div class="bg-red-600 text-white font-bold px-4 py-2 text-lg rounded-3xl">
+      TODAY LOCAL MANDI PRICES
+    </div>
+    <div class="flex-1 h-1 bg-red-600"></div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="bg-sky-700 rounded-md px-6 py-6 mb-6">
+    <div class="flex flex-wrap gap-4 items-center">
+
+      <select class="bg-white px-4 py-2 rounded-md w-52">
+        <option>-- Select State --</option>
+        <option>-- Bihar --</option>
+        <option>-- Jharkhand --</option>
+        <option>-- Madhya pradesh--</option>
+        <option>-- Punjab --</option>
+        <option>-- Haryana --</option>
+        <option>-- Rajasthan --</option>
+        <option>-- Orissa --</option>
+        <option>-- Maharashtra --</option>
+        <option>-- Kerala --</option>
+        <option>-- Tamil Nadu --</option>
+        <option>-- Goa --</option>
+        <option>-- Uttar Pradesh --</option>
+        <option>-- Tripura --</option>
+        <option>-- Nagaland --</option>
+        <option>-- Arunachal pradesh --</option>
+        <option>-- Nepal --</option>
+        <option>-- China --</option>
+        <option>-- Pakistan --</option>
+        <option>-- Bangladesh --</option>
+        <option>-- tajakistan --</option>
+      </select>
+
+      <select class="bg-white px-4 py-2 rounded-md w-52">
+        <option>-- Select District --</option>
+      </select>
+
+      <select class="bg-white px-4 py-2 rounded-md w-52">
+        <option>-- Select Crop --</option>
+      </select>
+
+      <input
+        type="date"
+        class="bg-white px-4 py-2 rounded-md w-44"
+      />
+
+      <input
+        type="date"
+        class="bg-white px-4 py-2 rounded-md w-44"
+      />
+
+      <button class="bg-white px-6 py-2 rounded-md font-semibold">
+        Search
+      </button>
+
+    </div>
+  </div>
+
+  <!-- RESULT CARD -->
+  <div class="bg bg-sky-100 rounded-lg shadow-md p-2 relative">
+
+    <!-- DATE BADGE -->
+    <div class="absolute -top-3 left-4 bg bg-sky-600 text-white text-sm font-semibold px-3 py-1 rounded">
+      DD.MM.YYYY
+    </div>
+
+    <div class="grid grid-cols-4 items-center">
+
+      <!-- MANDI NAME -->
+      <div class="text-center">
+        <h3 class="text-lg font-bold">Local Mandi Name</h3>
+      </div>
+
+      <!-- CROPS -->
+      <div class="text-center">
+        <h3 class="text-lg font-bold">Crop Name</h3>
+      </div>
+
+      <!-- yesterday PRICES -->
+      <div class="text-center">
+        <h3 class="text-lg font-bold mb-1">yesterday prices:</h3>
+        <p>Max: <span class="text-emerald-600 font-semibold">₹.000</span></p>
+        <p>Min: <span class="text-emerald-600 font-semibold">₹.000</span></p>
+        <p class="text-sm">100kg</p>
+      </div>
+
+      <!-- today PRICES -->
+      <div class="text-center">
+        <h3 class="text-lg font-bold mb-1">Today Prices:</h3>
+        <p>Max: <span class="text-emerald-600 font-semibold">₹.000</span></p>
+        <p>Min: <span class="text-emerald-600 font-semibold">₹.000</span></p>
+        <p class="text-sm">100kg</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- MANDI NEWS SECTION -->
+<div class="px-20 mt-10">
+
+  <!-- Section Title -->
+  <h2 class="text-2xl font-bold mb-6">Latest Mandi News</h2>
+
+  <!-- News Grid -->
+  <div class="grid grid-cols-4 gap-6">
+
+    <!-- NEWS CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      
+      <!-- IMAGE (you will put image) -->
+      <div class="h-48 bg-gray-300">
+         <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+
+      <!-- CONTENT -->
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+
+        <p class="text-sm text-gray-600">
+          Posted: 1 Jan, 2026
+        </p>
+      </div>
+    </div>
+
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+    <!-- DUPLICATE CARD -->
+    <div class="bg-emerald-100 rounded-xl shadow-md overflow-hidden">
+      <div class="h-48 bg-gray-300">
+        <img src="image/unique image.png" class="w-full h-full object-cover" />
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg leading-snug mb-3">
+          news that will make you the great emperor of the world...
+        </h3>
+        <p class="text-sm text-gray-600">Posted: 1  Jan, 2026</p>
+      </div>
+    </div>
+
+    
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-gray-100 mt-16 border-t">
+
+  <div class="px-20 py-12">
+
+    <!-- TOP FOOTER GRID -->
+    <div class="grid grid-cols-4 gap-10">
+
+      <!-- COLUMN 1: ABOUT -->
+      <div>
+        <!-- LOGO (you add image) -->
+        <div class="mb-4">
+          <!-- <img src="logo.png" class="h-8" /> -->
+          <h3 class="text-xl font-bold text-emerald-600">MandiSystem</h3>
+          <p class="text-xs text-gray-500">A division of Emperor pvt ltd</p>
+        </div>
+
+        <p class="text-sm text-gray-700 leading-relaxed mb-6">
+          MandiSystem is a data led Agritech platform owned by Emperor pvt ltd.
+          Stay updated on the latest advancements in technology and innovation
+          shaping the farming and cultivation sector. Learn how modern
+          agriculture is transforming the industry. MandiSystem helps farmers,
+          Wholesaler, and Retailers to stay interconnected for better business
+          outcomes.
+        </p>
+
+        <button class="bg-emerald-600 text-white px-4 py-2 rounded-md text-sm font-semibold">
+          Get MandiSystem App
+        </button>
+      </div>
+
+      <!-- COLUMN 2: QUICK LINKS -->
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Quick Links</h4>
+        <div class="w-12 h-0.5 bg-emerald-500 mb-4"></div>
+
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li>Mandi Prices</li>
+          <li>Weather</li>
+          <li>Krishi Duniya</li>
+          <li>Videos</li>
+          <li>Farmer</li>
+          <li>Wholesaler</li>
+        </ul>
+      </div>
+
+      <!-- COLUMN 3: USEFUL LINKS -->
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Useful Links</h4>
+        <div class="w-12 h-0.5 bg-emerald-500 mb-4"></div>
+
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li>About Us</li>
+          <li>Privacy Policy</li>
+          <li>Terms & Conditions</li>
+          <li>Contact Us</li>
+          <li>Blog</li>
+          <li>Sitemap</li>
+        </ul>
+      </div>
+
+      <!-- COLUMN 4: GET IN TOUCH -->
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Get In Touch</h4>
+        <div class="w-12 h-0.5 bg-emerald-500 mb-4"></div>
+
+        <p class="text-sm text-gray-700 mb-2">
+          <strong>Address:</strong> E-1/124, Emperor - 462016
+        </p>
+        <p class="text-sm text-gray-700 mb-2">
+          <strong>Phone:</strong> +91-98938160
+        </p>
+        <p class="text-sm text-gray-700 mb-6">
+          <strong>Email:</strong> ravikumar91622436@gmail.com
+        </p>
+
+        <!-- SOCIAL ICONS (you add icons/images) -->
+        <div class="flex gap-3">
+          <div class="w-9 h-9 bg-gray-300 rounded"></div>
+          <div class="w-9 h-9 bg-gray-300 rounded"></div>
+          <div class="w-9 h-9 bg-gray-300 rounded"></div>
+          <div class="w-9 h-9 bg-gray-300 rounded"></div>
+          <div class="w-9 h-9 bg-gray-300 rounded"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM COPYRIGHT -->
+    <div class="mt-12 border-t pt-4 text-center text-sm text-gray-600 bg-transparent">
+      Copyright © MandiSystem. All Rights Reserved
+    </div>
+
+  </div>
+
+  <!-- GRASS IMAGE AREA (you add image) -->
+  <div class="h-20 bg-gray-200">
+    <img src="image/green border.png" class="w-full h-full object-cover" /> 
+  </div>
+
+</footer>
+
+</body>
+</html>
